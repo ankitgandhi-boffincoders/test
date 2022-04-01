@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <style type="text/css">
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: black;
+        display: contents;
+        font-family: Georgia, serif;
+        font-size: 24px;
+        text-align: center;
+      }
+      .container {
+        border: 20px solid tan;
+        width: fit-content;
+        height: fit-content;
+        display: contents;
+        vertical-align: middle;
+      }
+      .logo {
+        margin: 20px;
+        width: 200px;
+        max-height: 100px;
+      }
+
+      .assignment {
+        margin: 20px;
+      }
+
+      .footer {
+        font-size: 15px;
+        color: #ccc;
+      }
+      .signClass {
+        position: fixed;
+        border-top: 2px solid black;
+        width: 150px;
+        margin-left: 100px;
+      }
+      .rightPosition {
+        right: 5%;
+        text-align: end;
+        margin-right: 20%;
+        /* bottom:70%; */
+      }
+
+      .dateValue {
+        position: absolute;
+        left: 70%;
+        top: 76%;
+
+        border-bottom: 2px solid black;
+        margin-right: 10px;
+        /* width: 150px; */
+      }
+
+      .date {
+        border-bottom: 2px solid black;
+        width: auto;
+        text-align: justify;
+      }
+    </style>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+  </head>
+  <body class="container">
+    <main>
+      <img class="logo src=<%=employee.organization_logo%>" />
+
+      <h2
+        class="assignment"
+        style="font-size: 30px"
+        style="font-family: verdana"
+      >
+        <i><%=employee.company_name%></i>
+      </h2>
+      <h1 class="assignment">Certificate Of Appreciation</h1>
+
+      <h2
+        class="assignment"
+        style="font-size: 30px"
+        style="font-family: verdana"
+      >
+        <i>This Certificate Is Awarded To</i>
+      </h2>
+      <p
+        class="assignment"
+        STYLE="text-decoration:underline"
+        style="font-family: verdana"
+        style
+        type="text"
+        style="border-bottom: 1px dotted #000"
+      >
+        <%= employee.name %>
+      </p>
+
+      <h2
+        class="assignment"
+        style="font-size: 20px"
+        style="font-family: verdana"
+      >
+        <i><%=tagline%></i>
+      </h2>
+      <p class="assignment" STYLE="text-decoration:underline">
+        <strong><%= employee.award_description %></strong>
+      </p>
+
+      <!-- <div class="d-flex justify-content-around ">
+          <div class="signature"> </div>
+          <div class="signature"></div>
+          <div class="date col-sm-3"><%= employee.date %></div>
+        </div>
+        <div class="d-flex justify-content-around ">
+          <div class="sign">Signature</div>
+          <div class="signature"></div>
+          <div class="signature col-sm-4">Date</div>
+        </div> -->
+
+        <div class="signature">
+          <div class="signature"></div>
+          <div class="signature"></div>
+          <div class="signature"></div>
+        </div>
+        <div class="signature">
+          <div class="signature"></div>
+          <div class="signature"></div>
+          <div class="signature rightPosition"></div>
+      <div class="signature">
+        <div class="signature"></div>
+        <div class="signature"></div>
+        <div class="signature"></div>
+      </div>
+      <div class="signature">
+        <div class="signature"></div>
+        <div class="signature"></div>
+        <div class="signature rightPosition"></div>
+      </div>
+      <div class="signature">
+        <div class="signature"></div>
+        <div class="signature"></div>
+        <div class="signature"></div>
+      </div>
+      <div class="signature">
+        <div class="signClass"></div>
+        <div class="signature"></div>
+        <div class="signature rightPosition"></div>
+      </div>
+      <div class="signature">
+        <div class="signature"></div>
+        <div class="signature"></div>
+        <div class="dateValue"><%= employee.date %></div>
+      </div>
+      <div class="signature">
+        <div class="signClass">Signature</div>
+        <div class="signature"></div>
+        <div class="signature rightPosition">Date</div>
+      </div>
+    </main>
+    <footer>
+      <p class="footer text-muted">
+        &copy; Copyright 2022 <%= employee.company_name %>
+      </p>
+    </footer>
+  </body>
+</html>
